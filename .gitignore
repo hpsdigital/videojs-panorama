@@ -35,5 +35,5 @@ test/dist/
 
 _local
 
-dist/
+# dist/
 assets/
