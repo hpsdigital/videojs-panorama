@@ -127,6 +127,11 @@ export type Settings = {
         rotateZ?: number;
     };
 
+    SphericalSegment?: {
+        start?: number;
+        length?: number;
+    };
+
     dualFish?: {
         width: number,
         height: number,

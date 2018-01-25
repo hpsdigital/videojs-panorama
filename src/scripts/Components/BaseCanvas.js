@@ -221,6 +221,9 @@ class BaseCanvas extends Component{
             this._mouseDownPointer.y = clientY;
             this._mouseDownLocation.Lon = this._lon;
             this._mouseDownLocation.Lat = this._lat;
+
+            // console.log('turning pointer events off for markers');
+            $('.vjs-marker').css('pointer-events', 'none');
         }
     }
 
@@ -258,6 +261,10 @@ class BaseCanvas extends Component{
 
     handleMouseUp(event: any): void{
         this._mouseDown = false;
+        
+        // console.log('turning pointer events on for markers');
+        $('.vjs-marker').css('pointer-events', 'auto');
+
         if(this.options.clickToToggle){
             const clientX = event.clientX || event.changedTouches && event.changedTouches[0].clientX;
             const clientY = event.clientY || event.changedTouches && event.changedTouches[0].clientY;
